@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+<title> Reader {{ unit.name }}</title>{% endblock %}
+{% block content %}
+    <div class="container minimal mt-5 pt-5">
+        <h6 class="text-center text-success">{{ unit.name }} | {{course.abbr}} | Y{{unit.year}} | S {{paper.sem}}</h6>
+        <div class="container col-md-9 mx-auto py-5">
+            <hr>
+            {{paper.questions | safe}}
+        </div>
+    </div>
+{% endblock %}

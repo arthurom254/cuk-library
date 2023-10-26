@@ -1,0 +1,74 @@
+h1,
+h2 {
+    padding-bottom: 2px;
+}
+
+.container .card img {
+    height: 95vh;
+}
+@media only screen and (max-width:600px){
+.container .card img {
+    height: 65vh;
+}
+}
+.container .card h5 {
+    text-decoration: underline;
+}
+
+.form-control:focus {
+    border-color: #198754;
+    box-shadow: 0 0 0 0.2rem rgba(45, 163, 73, 0.25);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: rgba(45, 163, 73, 0.25);
+}
+
+.minimal {
+    min-height: 60vh;
+}
+
+.copyright {
+    margin-top: 35px;
+    padding-bottom: 25px;
+}
+
+.copyright p {
+    border-top: #909090 solid 1px;
+    color: #fff;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: center;
+    padding-top: 25px;
+    font-weight: normal;
+}
+
+
+ul.contacts li a {
+    color: #fff;
+}
+
+ion-icon {
+    --ionicon-stroke-width: 16px;
+    color: #198754;
+    font-size: 1.2em;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.atomsmall
+{
+    font-size: 0.7em;
+}

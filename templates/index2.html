@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>units</title>
+{% endblock %}
+{% block content %}
+<div class="container minimal pt-5 mt-5 mx-auto">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="yr4-tab" data-bs-toggle="tab" data-bs-target="#yr4" type="button"
+                role="tab" aria-controls="yr4" aria-selected="true">Year 4</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="yr3-tab" data-bs-toggle="tab" data-bs-target="#yr3" type="button" role="tab"
+                aria-controls="yr3" aria-selected="false">Year 3</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="yr2-tab" data-bs-toggle="tab" data-bs-target="#yr2" type="button" role="tab"
+                aria-controls="yr2" aria-selected="false">Year 2</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="yr1-tab" data-bs-toggle="tab" data-bs-target="#yr1" type="button" role="tab"
+                aria-controls="yr1" aria-selected="false">Year 1</button>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="yr4" role="tabpanel" aria-labelledby="home-tab">
+
+            <ul class="list-group">
+
+                {% for units in unit %}
+                {% if units.year == '4' %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a class="text-dark text-decoration-none" href="/read/{{units.name}}">{{units.name | upper}}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+
+            </ul>
+
+        </div>
+        <div class="tab-pane" id="yr3" role="tabpanel" aria-labelledby="profile-tab">
+
+            <ul class="list-group">
+
+                {% for units in unit %}
+                {% if units.year == '3' %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a class="text-dark text-decoration-none" href="/read/{{units.name}}">{{units.name | upper }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+
+            </ul>
+
+        </div>
+        <div class="tab-pane" id="yr2" role="tabpanel" aria-labelledby="messages-tab">
+            <ul class="list-group">
+
+                {% for units in unit %}
+                {% if units.year == '2' %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a class="text-dark text-decoration-none" href="/read/{{units.name}}">{{units.name | upper}}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+
+            </ul>
+        </div>
+        <div class="tab-pane" id="yr1" role="tabpanel" aria-labelledby="messages-tab">
+
+            <ul class="list-group">
+
+                {% for units in unit %}
+                {% if units.year == '1' %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a class="text-dark text-decoration-none" href="/read/{{units.name}}">{{units.name | upper}}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
